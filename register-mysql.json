@@ -1,0 +1,24 @@
+{
+    "name": "inventory-connector",
+    "config": {
+        "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+        "tasks.max": "1",
+        "database.hostname": "mysql",
+        "database.port": "3306",
+        "database.user": "kafka_lab",
+        "database.password": "kafkapass",
+        "database.server.id": "184054",
+        "database.server.name": "buy_topic",
+        "database.whitelist": "inventory",
+        "database.history.kafka.bootstrap.servers": "kafka:9092",
+        "database.history.kafka.topic": "schema-changes-orders",
+		"database.history.producer.ssl.truststore.location": "kafka.client.truststore.jks",
+		"database.history.producer.ssl.truststore.password": "KafkaOnsClient",
+		"database.history.producer.security.protocol": "SASL_SSL",
+		"database.history.producer.sasl.mechanism": "PLAIN",
+		"database.history.consumer.ssl.truststore.location": "kafka.client.truststore.jks",
+		"database.history.consumer.ssl.truststore.password": "KafkaOnsClient",
+		"database.history.consumer.security.protocol": "SASL_SSL",
+		"database.history.consumer.sasl.mechanism": "PLAIN"
+    }
+}
